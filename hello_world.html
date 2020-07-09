@@ -36,7 +36,6 @@
         </nav>
     </div>
     
-
     <!--  DESKTOP NAV  -->
     <div class="container">
         <ul class="sidenav sidenav-fixed collection with-header">
@@ -46,8 +45,8 @@
             <li class="collection-item"><a href="./index.html#differences">Javascript & Java</a></li>
             <li class="collection-item"><a href="#hello-world">Hello World</a></li>
             <li class="collection-item"><a href="#variables">Variables</a></li>
-            <li class="collection-item"><a href="#">Declaring Variables</a></li>
-            <li class="collection-item"><a href="#">Variable Scope</a></li>
+            <li class="collection-item"><a href="#declaring-variables">Declaring Variables</a></li>
+            <li class="collection-item"><a href="#variable-scope">Variable Scope</a></li>
             <li class="collection-item"><a href="#">Global Variables</a></li>
             <li class="collection-item"><a href="#">Constraints</a></li>
             <li class="collection-item"><a href="#">Data Types</a></li>
@@ -67,8 +66,8 @@
             <li class="collection-item sidenav-close"><a href="./index.html#differences">Javascript & Java</a></li>
             <li class="collection-item sidenav-close"><a href="#hello-world">Hello World</a></li>
             <li class="collection-item sidenav-close"><a href="#variables">Variables</a></li>
-            <li class="collection-item sidenav-close"><a href="#">Declaring Variables</a></li>
-            <li class="collection-item sidenav-close"><a href="#">Variable Scope</a></li>
+            <li class="collection-item sidenav-close"><a href="#declaring-variables">Declaring Variables</a></li>
+            <li class="collection-item sidenav-close"><a href="#variable-scope">Variable Scope</a></li>
             <li class="collection-item sidenav-close"><a href="#">Global Variables</a></li>
             <li class="collection-item sidenav-close"><a href="#">Constraints</a></li>
             <li class="collection-item sidenav-close"><a href="#">Data Types</a></li>
@@ -80,17 +79,17 @@
     </div>
 
     <main>
-        <div class="container">
+        <div class="container section">
             <h2 id="hello-world">Hello World</h2>
             <div class="divider"></div>
             <p class="flow-text">To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
             <div class="row">
                 <div class="col l6 m8 s12">
-                    <div class="card grey lighten-2">
+                    <div class="card grey lighten-3">
                         <div class="card-content">
                             <p>function greetMe(yourName) {</p>
                             <p style="padding-left: 20px;">alert("Hello " + yourName);</p>
-                            <p style="padding-left: 20px;">};</p>
+                            <p>};</p>
                         </div>
                     </div>
                 </div>
@@ -98,10 +97,93 @@
             <p class="">Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
         </div>
 
-        <div class="container">
+        <div class="container section">
             <h2 id="variables">Variables</h2>
             <div class="divider"></div>
             <p class="flow-text">Variables are used as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+            <blockquote>Variables names are commonly assigned using what is called Camel case. Camel case is the practice of writing phrases such that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation. Common examples include "iPhone" and "eBay". The greetMe function in the Hello World section is an example of Camel case.</blockquote>
+            <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+        </div>
+
+        <div class="container section">
+            <h2 id="declaring-variables">Declaring Variables</h2>
+            <div class="divider"></div>
+            <p class="flow-text">A variable may be declared in three ways:</p>
+            <ul class="collection">
+                <li class="collection-item"><p>var</p></li>
+                <li class="collection-item"><p>let</p></li>
+                <li class="collection-item"><p>const</p></li>
+            </ul>
+            <p>An example of variable declaration using the "var" keyword:</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>var x = 42;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>This syntax can be used to assign both local and global variables.</p>
+            <p>By simply assigning a variable, such as:</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>x = 13;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
+            <p>Here's an example using the "let" keyword.</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>let warmGreetings = "Hello World";</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+        </div>
+
+        <div class="container">
+            <h2 id="variable-scope">Variable Scope</h2>
+            <div class="divider"></div>
+            
+            <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+            <blockquote>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</blockquote>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>if (true) {</p>
+                            <p style="padding-left: 20px;">var x = 5;</p>
+                            <p>};</p>
+                            <br>
+                            <p>console.log(x);   //  5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
