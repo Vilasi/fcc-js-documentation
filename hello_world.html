@@ -47,7 +47,7 @@
             <li class="collection-item"><a href="#variables">Variables</a></li>
             <li class="collection-item"><a href="#declaring-variables">Declaring Variables</a></li>
             <li class="collection-item"><a href="#variable-scope">Variable Scope</a></li>
-            <li class="collection-item"><a href="#">Global Variables</a></li>
+            <li class="collection-item"><a href="#global-variables">Global Variables</a></li>
             <li class="collection-item"><a href="#">Constraints</a></li>
             <li class="collection-item"><a href="#">Data Types</a></li>
             <li class="collection-item"><a href="#">if...else Statements</a></li>
@@ -68,7 +68,7 @@
             <li class="collection-item sidenav-close"><a href="#variables">Variables</a></li>
             <li class="collection-item sidenav-close"><a href="#declaring-variables">Declaring Variables</a></li>
             <li class="collection-item sidenav-close"><a href="#variable-scope">Variable Scope</a></li>
-            <li class="collection-item sidenav-close"><a href="#">Global Variables</a></li>
+            <li class="collection-item sidenav-close"><a href="#global-variables">Global Variables</a></li>
             <li class="collection-item sidenav-close"><a href="#">Constraints</a></li>
             <li class="collection-item sidenav-close"><a href="#">Data Types</a></li>
             <li class="collection-item sidenav-close"><a href="#">if...else Statements</a></li>
@@ -169,21 +169,27 @@
                     </div>
                 </div>
             </div>
+            <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>if (true) {</p>
+                            <p style="padding-left: 20px;">let y = 5;</p>
+                            <p>};</p>
+                            <br>
+                            <p>console.log(y); // ReferenceError: y is not defined</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="container section">
+            <h2 id="global-variables">Global Variables</h2>
+            <div class="divider"></div>
+            <blockquote>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</blockquote>
+            <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
         </div>
 
 
