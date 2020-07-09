@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
@@ -15,31 +15,111 @@
 </head>
 
 <body>
-    <!--Dropdown Menu Content-->
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-    <!--Header Navbar-->
-    <div class="navbar-fixed">
+    <!--  HEADER  -->
+    <div id="header" class="navbar-fixed">
         <nav>
             <div class="nav-wrapper blue-grey">
-                <div class="container">
+                <div class="hide-on-med-and-down" style="padding-left: 50px;">
                     <a href="#" class="brand-logo">Javascript Basics Documentation</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Sass</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Explore<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
+                    
                 </div>
-            
+                <!--  HEADER ON MED/SMALL SCREENS  -->
+                <div class="container hide-on-large-only">
+                    <a href="#" class="brand-logo">JS Docs</a>
+
+                    <!--  MOBILE SIDENAV TRIGGER  -->
+                    <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
             </div>
         </nav>
-
     </div>
-        
+    
+
+    <!--  DESKTOP NAV  -->
+    <div class="container">
+        <ul class="sidenav sidenav-fixed collection with-header">
+            <li class="collection-header center-align">JavaScript Documentation</li>
+            <li class="collection-item"><a href="#introduction">Introduction</a></li>
+            <li class="collection-item"><a href="#">Prerequisits</a></li>
+            <li class="collection-item"><a href="#">Javascript & Java</a></li>
+            <li class="collection-item"><a href="#">Hello World</a></li>
+            <li class="collection-item"><a href="#">Variables</a></li>
+            <li class="collection-item"><a href="#">Declaring Variables</a></li>
+            <li class="collection-item"><a href="#">Variable Scope</a></li>
+            <li class="collection-item"><a href="#">Global Variables</a></li>
+            <li class="collection-item"><a href="#">Constraints</a></li>
+            <li class="collection-item"><a href="#">Data Types</a></li>
+            <li class="collection-item"><a href="#">if...else Statements</a></li>
+            <li class="collection-item"><a href="#">while Statements</a></li>
+            <li class="collection-item"><a href="#">Function Declarations</a></li>
+            <li class="collection-item"><a href="#">Reference</a></li>
+        </ul>
+    </div>
+    
+    <!--  MOBILE NAV  -->
+    <div>
+        <ul class="sidenav collection with-header" id="mobile-links">
+            <li class="collection-header center-align">JavaScript Documentation</li>
+            <li class="collection-item"><a href="#introduction">Introduction</a></li>
+            <li class="collection-item"><a href="#">Prerequisits</a></li>
+            <li class="collection-item"><a href="#">Javascript & Java</a></li>
+            <li class="collection-item"><a href="#">Hello World</a></li>
+            <li class="collection-item"><a href="#">Variables</a></li>
+            <li class="collection-item"><a href="#">Declaring Variables</a></li>
+            <li class="collection-item"><a href="#">Variable Scope</a></li>
+            <li class="collection-item"><a href="#">Global Variables</a></li>
+            <li class="collection-item"><a href="#">Constraints</a></li>
+            <li class="collection-item"><a href="#">Data Types</a></li>
+            <li class="collection-item"><a href="#">if...else Statements</a></li>
+            <li class="collection-item"><a href="#">while Statements</a></li>
+            <li class="collection-item"><a href="#">Function Declarations</a></li>
+            <li class="collection-item"><a href="#">Reference</a></li>
+        </ul>
+    </div>
+
+
+
+    <main>
+        <div id="introduction" class="container">
+            <h2>Introduction</h2>
+            <div class="divider"></div>
+                <p class="flow-text">JavaScript is a cross-platform, object-oriented scripting language.</p>
+                <blockquote >It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</blockquote>
+                
+                <ul class="collection">
+                    <li class="collection-item">
+                        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+                    </li>
+                    <li class="collection-item">
+                        <p>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</p>
+                    </li>
+                    <li class="collection-item">
+                        <p>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</p>
+                    </li>
+                </ul>
+        </div>
+
+        <div id="prerequisites"class="container">
+            <h2>Prerequisites</h2>
+            <div class="divider"></div>
+            <p class="flow-text">This guide assumes you have the following basic background:</p>
+
+            <ul class="collection">
+                <li class="collection-item valign-wrapper">
+                    A general understanding of the Internet and the World Wide Web (WWW).</p>
+                </li>
+                <li class="collection-item valign-wrapper">
+                    <p>Good working knowledge of HyperText Markup Language (HTML).</p>
+                </li>
+                <li class="collection-item valign-wrapper">
+                    <p>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</p>
+                </li>
+            </ul>
+        </div>
+
+    </main>
         
 
 
