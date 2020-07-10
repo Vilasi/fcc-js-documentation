@@ -27,3 +27,8 @@ h2::before {
 ul.sidenav li:last-child {
   padding-bottom: 70px;
 }
+
+a.btn-small {
+  margin-top: 20px;
+  margin-left: 20px;
+}
