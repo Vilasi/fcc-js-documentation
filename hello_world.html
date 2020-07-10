@@ -48,7 +48,7 @@
             <li class="collection-item"><a href="#declaring-variables">Declaring Variables</a></li>
             <li class="collection-item"><a href="#variable-scope">Variable Scope</a></li>
             <li class="collection-item"><a href="#global-variables">Global Variables</a></li>
-            <li class="collection-item"><a href="#">Constants</a></li>
+            <li class="collection-item"><a href="#constants">Constants</a></li>
             <li class="collection-item"><a href="#">Data Types</a></li>
             <li class="collection-item"><a href="#">if...else Statements</a></li>
             <li class="collection-item"><a href="#">while Statements</a></li>
@@ -69,7 +69,7 @@
             <li class="collection-item sidenav-close"><a href="#declaring-variables">Declaring Variables</a></li>
             <li class="collection-item sidenav-close"><a href="#variable-scope">Variable Scope</a></li>
             <li class="collection-item sidenav-close"><a href="#global-variables">Global Variables</a></li>
-            <li class="collection-item sidenav-close"><a href="#">Constants</a></li>
+            <li class="collection-item sidenav-close"><a href="#constants">Constants</a></li>
             <li class="collection-item sidenav-close"><a href="#">Data Types</a></li>
             <li class="collection-item sidenav-close"><a href="#">if...else Statements</a></li>
             <li class="collection-item sidenav-close"><a href="#">while Statements</a></li>
@@ -203,10 +203,72 @@
             <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
         </div>
 
+        <div class="container section">
+            <h2 id="constants">Constants</h2>
+            <div class="divider"></div>
+            <p class="flow-text">You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>const PI = 3.14;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="collection">
+                <li class="collection-item">A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</li>
+                <li class="collection-item">The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</li>
+            </ul>
+            <blockquote>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</blockquote>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>// THIS WILL CAUSE AN ERROR</p>
+                            <p>function f() {};</p>
+                            <p>const f = 5;</p>
+                            <br>
+                            <p>// THIS WILL ALSO CAUSE AN ERROR</p>
+                            <p>f() {</p>
+                            <p style="padding-left: 20px;">const g = 5;</p>
+                            <p style="padding-left: 20px;">var g;</p>
+                            <p>};</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>However, object attributes are not protected, so the following statement is executed without problems</p>
+            <div class="row">
+                <div class="col l6 m8 s12">
+                    <div class="card grey lighten-3">
+                        <div class="card-content">
+                            <p>const MY_OBJECT = {"key": "value"};</p>
+                            <p>MY_OBJECT.key = "otherValue";</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+
+
+             
+
+
+            
+
+
+        </div>
+
         <!--  LINK TO NEXT PAGE  -->
         <div class="container">
 
-            <a href="./constraints.html" class="btn wave-effect blue darken-2 z-depth-2 right" style="margin-top:20px; margin-bottom: 40px;"><i class="material-icons right">arrow_right_alt</i>Data Types</a>
+            <a href="./data-types.html" class="btn wave-effect blue darken-2 z-depth-2 right" style="margin-top:20px; margin-bottom: 40px;"><i class="material-icons right">arrow_right_alt</i>Data Types</a>
             <a href="./index.html" class="btn wave-effect blue darken-2 z-depth-2 left" style="margin-top:20px; margin-bottom: 40px;"><i class="material-icons left">arrow_back</i>Introduction</a>
         </div>
 
